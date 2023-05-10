@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">French Vocab Revision</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="/play/default">Quickplay</a>
+        <a class="nav-link" href="/play/speedrun">Speedrun</a>
+        <a class="nav-link" href="/play/timed">Timed</a>
+        <a class="nav-link" href="/play/survival">Survival</a>
+      </div>
+      <div class="navbar-nav ms-auto pe-2">
+        <a class="nav-link" href="/leaderboard">Leaderboard</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>const socket = io()</script>

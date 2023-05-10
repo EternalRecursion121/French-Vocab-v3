@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Leaderboard</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<%- include('nav.html') %>
+  <div class="bg-img" style="background-image  : url('img/jfif.jpg'); background-size: cover; background-repeat: no-repeat;">
+    <div class="mask text-center px-5" style="background-color: rgba(0, 0, 0, 0.7); height:111vh">
+      <h1 class="text-light">Leaderboard</h1>
+      <div class="text-light p-3">
+        <form class="form-inline" action="/leaderboard" method="post">
+          <div class="row align-items-start">
+            <div class="col-2">
+              <label class="col-form-label" for="select-module">Module(s):</label>
+            </div>
+            <div class="col">
+              <select class="form-select" id="select-module">
+                <option selected value="all">All Modules</option>
+                <option value="section_1">Section 1</option>
+                <option value="section_2">Section 2</option>
+                <option value="0">1.1 Common Verbs</option>
+                <option value="1">1.2 Common Adjectives</option>
+                <option value="2">1.3 Common Adverbs</option>
+                <option value="3">1.4 Prepositions</option>
+                <option value="4">1.5 Colours</option>
+                <option value="5">1.6 Numbers</option>
+                <option value="6">1.7 Ordinal Numbers</option>
+                <option value="7">1.8 Quantities and Measures</option>
+                <option value="8">1.9 Useful Connectors</option>
+                <option value="9">1.10 Time Expressions</option>
+                <option value="10">1.11 Times of Day</option>
+                <option value="11">1.12 Days of the Week</option>
+                <option value="12">1.13 Months and Seasons of the Year</option>
+                <option value="13">1.14 Question Words</option>
+                <option value="14">1.15 Other Useful Expressions</option>
+                <option value="15">1.16 Other High-Frequency Words</option>
+                <option value="16">1.17 Countries</option>
+                <option value="17">1.18 Continents</option>
+                <option value="18">1.19 Nationalities</option>
+                <option value="19">1.20 Admininstrative Regions of France</option>
+                <option value="20">1.21 Areas, Mountains, Seas</option>
+                <option value="21">1.22 Useful Acronyms</option>
+                <option value="22">1.23 Social Conventions</option>
+                <option value="23">1.24 Language Used in Dialogues and Messages</option>
+                <option value="24">2.1 Daily Life, Food and Drink, Including Eating Out</option>
+                <option value="25">2.2 Words Relating to Dress and Style</option>
+                <option value="26">2.3 Words on Relations, Relationships, Personal and Physical Characteristics</option>
+                <option value="27">2.4 Cultural Life</option>
+                <option value="28">2.5 Social Media</option>
+                <option value="29">2.6 Local Area, Holiday and Travel</option>
+                <option value="30">2.7 Weather Phrases</option>
+                <option value="31">2.8 Asking for Directions</option>
+                <option value="32">2.9 Dealing with Problems</option>
+                <option value="33">2.10 School</option>
+                <option value="34">2.11 Future aspirations, Study and Work</option>
+                <option value="35">2.12 Bringing the World Together, Environmental Issues</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <label class="col-form-label" for="select-gamemode">Gamemode:</label>
+            </div>
+            <div class="col">
+              <select class="form-select" id="select-gamemode">
+                <option value="speedrun">Speedrun</option>
+                <option value="timed">Timed</option>
+                <option value="survival">Survival</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div>
+        <table class="table">
+          <thead class="table">
+            <tr>
+              <th class="table-dark" scope="col">Rank</th>
+              <th class="table-dark" scope="col">Name</th>
+              <th class="table-dark" scope="col" id="scoreHead">Score</th>
+            </tr>
+          </thead>
+          <tbody class="table-dark table-striped" id="tableBody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="/js/leaderboard.js"></script>
+</body>
+</html>
